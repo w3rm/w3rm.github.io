@@ -1,0 +1,73 @@
+get:
+  tags:
+    - TodoItems
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml
+        application/json:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml
+        text/json:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml
+put:
+  tags:
+    - TodoItems
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int64
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ..\components\schemas\TodoItem.yaml
+      text/json:
+        schema:
+          $ref: ..\components\schemas\TodoItem.yaml
+      application/*+json:
+        schema:
+          $ref: ..\components\schemas\TodoItem.yaml
+  responses:
+    '200':
+      description: Success
+delete:
+  tags:
+    - TodoItems
+  summary: Deletes a specific TodoItem.
+  parameters:
+    - name: id
+      in: path
+      description: TodoItem identity (long)
+      required: true
+      schema:
+        type: integer
+        description: TodoItem identity (long)
+        format: int64
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml
+        application/json:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml
+        text/json:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml

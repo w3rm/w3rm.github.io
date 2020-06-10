@@ -1,0 +1,16 @@
+type: object
+properties:
+  date:
+    type: string
+    format: date-time
+  temperatureC:
+    type: integer
+    format: int32
+  temperatureF:
+    type: integer
+    format: int32
+    readOnly: true
+  summary:
+    type: string
+    nullable: true
+additionalProperties: false

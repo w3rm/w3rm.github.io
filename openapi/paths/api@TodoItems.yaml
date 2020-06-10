@@ -1,0 +1,49 @@
+get:
+  tags:
+    - TodoItems
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            type: array
+            items:
+              $ref: ..\components\schemas\TodoItem.yaml
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ..\components\schemas\TodoItem.yaml
+        text/json:
+          schema:
+            type: array
+            items:
+              $ref: ..\components\schemas\TodoItem.yaml
+post:
+  tags:
+    - TodoItems
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ..\components\schemas\TodoItem.yaml
+      text/json:
+        schema:
+          $ref: ..\components\schemas\TodoItem.yaml
+      application/*+json:
+        schema:
+          $ref: ..\components\schemas\TodoItem.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml
+        application/json:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml
+        text/json:
+          schema:
+            $ref: ..\components\schemas\TodoItem.yaml

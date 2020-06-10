@@ -1,0 +1,20 @@
+openapi: 3.0.1
+info:
+  title: ToDo API
+  description: A simple example ASP.NET Core Web API
+  termsOfService: 'https://example.com/terms'
+  contact:
+    name: Shayne Boyer
+    url: 'https://twitter.com/spboyer'
+    email: ''
+  license:
+    name: Use under LICX
+    url: 'https://example.com/license'
+  version: v1
+paths:
+  /api/TodoItems:
+    $ref: paths\api@TodoItems.yaml
+  '/api/TodoItems/{id}':
+    $ref: 'paths\api@TodoItems@{id}.yaml'
+  /WeatherForecast:
+    $ref: paths\WeatherForecast.yaml
