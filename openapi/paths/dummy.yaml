@@ -1,0 +1,22 @@
+get:
+  tags:
+    - dummy
+  responses:
+    '200':
+      description: Success
+      content:
+        text/plain:
+          schema:
+            type: array
+            items:
+              $ref: ..\components\schemas\dummy.yaml
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ..\components\schemas\dummy.yaml
+        text/json:
+          schema:
+            type: array
+            items:
+              $ref: ..\components\schemas\dummy.yaml

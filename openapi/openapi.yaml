@@ -11,6 +11,9 @@ info:
     name: Use under LICX
     url: 'https://example.com/license'
   version: v1
+  x-logo:
+    url: 'https://static.wixstatic.com/media/caa6e4_c162cfc75c1048dd8e85513372d87b8a~mv2.png/v1/fill/w_290,h_303,al_c,q_85,usm_0.66_1.00_0.01/tuna-logo-vertical-1.webp'
+    altText: Tuna.uy logo  
 paths:
   /api/TodoItems:
     $ref: paths\api@TodoItems.yaml
@@ -18,3 +21,5 @@ paths:
     $ref: 'paths\api@TodoItems@{id}.yaml'
   /WeatherForecast:
     $ref: paths\WeatherForecast.yaml
+  /dummy:
+    $ref: ./paths/dummy.yaml
